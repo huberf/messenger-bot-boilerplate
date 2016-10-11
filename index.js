@@ -57,10 +57,14 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
+// Used for verifying your bot. Simply change location from "/" to another
+// if you want to use "/" as a landing page, etc.
 app.get('/', (req, res) => {
   return bot._verify(req, res)
 })
 
+// Used for receiving messages. Simply change location from "/" to another
+// if you want to use "/" as a landing page, etc.
 app.post('/', (req, res) => {
   bot._handleMessage(req.body)
   res.end(JSON.stringify({status: 'ok'}))
