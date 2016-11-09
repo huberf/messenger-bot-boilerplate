@@ -36,6 +36,10 @@ bot.on('message', (payload, reply) => {
       console.log(err);
     }
     if( profile ) {
+      var parser = ("./interpreter.js");
+      sendMessage(parser.parse(message);
+      /*
+      // Kept temporarily
       if( message == "Hello" ) {
         sendMessage( "Hey user! I'm glad you contacted me!" );
       } else if( message.substring(0, 5)  == "Where" ) {
@@ -48,6 +52,7 @@ bot.on('message', (payload, reply) => {
       } else {
         sendMessage("You're a good coder, but you better increase your features game.");
       }
+      */
     }
   })
 })
